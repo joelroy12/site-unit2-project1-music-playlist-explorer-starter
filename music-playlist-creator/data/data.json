@@ -1,0 +1,66 @@
+[
+    {
+        "playlistID": 1,
+        "playlist_name": "WOW",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Dua Lipa",
+        "songs": ["Levitating", "Don't Start Now", "New Rules", "Physical", "Break My Heart"]
+    },
+    {
+        "playlistID": 2,
+        "playlist_name": "NAH",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Drake",
+        "songs": ["God's Plan", "Hotline Bling", "One Dance", "In My Feelings", "Nonstop"]
+    },
+    {
+        "playlistID": 3,
+        "playlist_name": "LOOKUP",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Billie Eilish",
+        "songs": ["Bad Guy", "Therefore I Am", "Happier Than Ever", "Ocean Eyes", "bury a friend"]
+    },
+    {
+        "playlistID": 4,
+        "playlist_name": "TURNAROUND",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Harry Styles",
+        "songs": ["As It Was", "Watermelon Sugar", "Adore You", "Sign of the Times", "Golden"]
+    },
+    {
+        "playlistID": 5,
+        "playlist_name": "WATCHOUT",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Taylor Swift",
+        "songs": ["Anti-Hero", "Shake It Off", "Blank Space", "Cruel Summer", "Love Story"]
+    },
+    {
+        "playlistID": 6,
+        "playlist_name": "FUNKYTIME",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "The Weeknd",
+        "songs": ["Blinding Lights", "Save Your Tears", "Starboy", "Can't Feel My Face", "In The Night"]
+    },
+    {
+        "playlistID": 7,
+        "playlist_name": "UHOH",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Ariana Grande",
+        "songs": ["positions", "7 rings", "thank u, next", "Into You", "No Tears Left to Cry"]
+    },
+    {
+        "playlistID": 8,
+        "playlist_name": "WHO",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Ed Sheeran",
+        "songs": ["Shape of You", "Perfect", "Shivers", "Thinking Out Loud", "Bad Habits"]
+    }
+]

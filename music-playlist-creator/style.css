@@ -10,8 +10,14 @@ h1 {
     background-color: lightgray;
     color: rgb(103, 100, 100);
 }
+
 h3 {
     text-align: center;
+    margin-top: -50px;
+}
+
+.song-card p {
+    margin: -10px;
 }
 
 header {
@@ -24,36 +30,189 @@ header {
 footer {
     background-color: lightgray;
     border: 1px solid black;
-    position: relative;
-    bottom: 100;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    height: 5%;
+    height: 3%;
 }
 
 .playlist-cards {
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%; */
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex-wrap: wrap;
     max-width: 100%;
+    max-height: 100%;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     align-items: center;
+    justify-content: space-evenly;
+    margin: 40px;
 }
+
+/* div.song-card > img {
+    border: 1px solid red;
+} */
 
 .cards {
     height: 250px;
-    width: 200px;
+    width: 250px;
     background-color: lightgray;
     margin: 50px;
     border: 2px dotted black;
     border-radius: 5%;
     align-items: center;
+    margin-top: -0.5px;
 }
 
 .song-card {
     align-items: center;
-    border: 3px solid yellow;
+    border: 3px dotted black;
+    height: 350px;
+    width: 300px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    transition: transform 0.2s ease 0px 3px 4px;
+}
+
+.song-card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgb(124, 122, 122);
+    cursor: pointer;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+.modal-overlay.open {
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    margin-top: 150px;
+    padding: 20px 50px;
+    border: 2px solid black;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    border-radius: 25px;
+    gap: 40px;
+}
+
+.modal-playlist-specifics #playlist-name {
+    background-color: transparent;
+    color: black;
+    justify-self: flex-start;
+    margin-left: 15px;
+    letter-spacing: 2px;
+}
+
+.modal-playlist-specifics #playlist-author {
+    background-color: transparent;
+    color: black;
+    justify-self: flex-start;
+    margin-left: 15px;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: left;
+    margin-top: 0;
+}
+
+.modal-content #playlist-art {
+    width: 200px;
+    height: 200px;
+}
+
+.modal-playlist-specifics {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.modal-specific-words {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+.songs-list {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: max-content;
+    justify-content: flex-start;
+}
+
+.song-containers {
+    display: flex;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.song-containers h4, 
+.song-containers h3 {
+    margin: 5px;
+    justify-self: flex-start;
+}
+
+.song-containers img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+.close {
+    color: black;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.heart-button {
+    align-self: flex-start;
+    margin-left: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.like-count {
+    margin: 0;
 }

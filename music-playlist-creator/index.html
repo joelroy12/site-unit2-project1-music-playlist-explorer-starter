@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head class="banner">
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        
+        <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -19,57 +15,103 @@
         <main> 
             <div class="playlist-cards">
                 <div class="song-card">
-                    <img class="cards">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList1
+                        WOW
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList2
+                        NAH
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList3
+                        LOOKUP
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList4
+                        TURNAROUND
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList5
+                        WATCHOUT
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList6
+                        FUNKYTIME
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList7
+                        UHOH
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
-                <div>
-                    <img class="cards">
+                <div class="song-card">
+                    <img src="assets/img/playlist.png" class="cards">
                     <h3>
-                        PlayList8
+                        WHO
                     </h3>
+                    <p>
+                        Creator Name
+                    </p>
+                    <button class="heart-button">♡</button>
                 </div>
                 
             </div>
         </main>
 
+    <!-- Modal Structure -->
+    <div id="modal-overlay" class="modal-overlay">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-playlist-specifics">
+                    <img id="playlist-art" src="assets/img/playlist.png">
+                    <div class="modal-specific-words">
+                        <h1 id="playlist-name"></h1>
+                        <h2 id="playlist-author"></h2>
+                    </div>
+                </div>
+                <div id="songs-list"></div>
+            </div>
+    </div>
         <footer>
             <img class="banner-background">
         </footer>
