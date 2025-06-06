@@ -216,3 +216,21 @@ footer {
 .like-count {
     margin: 0;
 }
+
+.all-redirect {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.featured-redirect {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.featured-playlist-display {
+    width: 300px;
+    height: 300px;
+
+}
