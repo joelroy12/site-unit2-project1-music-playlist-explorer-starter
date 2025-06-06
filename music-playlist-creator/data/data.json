@@ -5,7 +5,13 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Dua Lipa",
-        "songs": ["Levitating", "Don't Start Now", "New Rules", "Physical", "Break My Heart"]
+        "songs": [
+            {"title": "Levitating", "duration": "3:23"},
+            {"title": "Don't Start Now", "duration": "3:03"},
+            {"title": "New Rules", "duration": "3:29"},
+            {"title": "Physical", "duration": "3:13"},
+            {"title": "Break My Heart", "duration": "3:41"}
+        ]
     },
     {
         "playlistID": 2,
@@ -13,7 +19,13 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Drake",
-        "songs": ["God's Plan", "Hotline Bling", "One Dance", "In My Feelings", "Nonstop"]
+        "songs": [
+            {"title": "God's Plan", "duration": "3:19"},
+            {"title": "Hotline Bling", "duration": "4:27"},
+            {"title": "One Dance", "duration": "2:53"},
+            {"title": "In My Feelings", "duration": "3:37"},
+            {"title": "Nonstop", "duration": "3:58"}
+        ]
     },
     {
         "playlistID": 3,
@@ -21,7 +33,13 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Billie Eilish",
-        "songs": ["Bad Guy", "Therefore I Am", "Happier Than Ever", "Ocean Eyes", "bury a friend"]
+        "songs": [
+            {"title": "Bad Guy", "duration": "3:12"},
+            {"title": "Therefore I Am", "duration": "2:54"},
+            {"title": "Happier Than Ever", "duration": "4:52"},
+            {"title": "Ocean Eyes", "duration": "3:20"},
+            {"title": "bury a friend", "duration": "3:13"}
+        ]
     },
     {
         "playlistID": 4,
@@ -29,7 +47,13 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Harry Styles",
-        "songs": ["As It Was", "Watermelon Sugar", "Adore You", "Sign of the Times", "Golden"]
+        "songs": [
+            {"title": "As It Was", "duration": "2:47"},
+            {"title": "Watermelon Sugar", "duration": "2:56"},
+            {"title": "Adore You", "duration": "3:27"},
+            {"title": "Sign of the Times", "duration": "5:42"},
+            {"title": "Golden", "duration": "3:28"}
+        ]
     },
     {
         "playlistID": 5,
@@ -37,15 +61,27 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Taylor Swift",
-        "songs": ["Anti-Hero", "Shake It Off", "Blank Space", "Cruel Summer", "Love Story"]
+        "songs": [
+            {"title": "Anti-Hero", "duration": "3:21"},
+            {"title": "Shake It Off", "duration": "3:39"},
+            {"title": "Blank Space", "duration": "3:51"},
+            {"title": "Cruel Summer", "duration": "2:58"},
+            {"title": "Love Story", "duration": "3:55"}
+        ]
     },
     {
-        "playlistID": 6,
-        "playlist_name": "FUNKYTIME",
-        "playlist_author": "jeffrey",
-        "playlist_art": "./assets/img/playlist.png",
-        "artist": "The Weeknd",
-        "songs": ["Blinding Lights", "Save Your Tears", "Starboy", "Can't Feel My Face", "In The Night"]
+    "playlistID": 6,
+    "playlist_name": "FUNKYTIME",
+    "playlist_author": "jeffrey",
+    "playlist_art": "./assets/img/playlist.png",
+    "artist": "The Weeknd",
+    "songs": [
+        {"title": "Blinding Lights", "duration": "3:21"},
+        {"title": "Save Your Tears", "duration": "3:35"},
+        {"title": "Starboy", "duration": "3:50"},
+        {"title": "Can't Feel My Face", "duration": "3:33"},
+        {"title": "In The Night", "duration": "3:55"}
+    ]
     },
     {
         "playlistID": 7,
@@ -53,7 +89,13 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Ariana Grande",
-        "songs": ["positions", "7 rings", "thank u, next", "Into You", "No Tears Left to Cry"]
+        "songs": [
+            {"title": "positions", "duration": "2:52","artist": "Ariana Grande"},
+            {"title": "7 rings", "duration": "2:58"},
+            {"title": "thank u, next", "duration": "3:27"},
+            {"title": "Into You", "duration": "4:04"},
+            {"title": "No Tears Left to Cry", "duration": "3:25"}
+        ]
     },
     {
         "playlistID": 8,
@@ -61,6 +103,12 @@
         "playlist_author": "jeffrey",
         "playlist_art": "./assets/img/playlist.png",
         "artist": "Ed Sheeran",
-        "songs": ["Shape of You", "Perfect", "Shivers", "Thinking Out Loud", "Bad Habits"]
+        "songs": [
+            {"title": "Shape of You", "duration": "3:53"},
+            {"title": "Perfect", "duration": "4:23"},
+            {"title": "Shivers", "duration": "3:27"},
+            {"title": "Thinking Out Loud", "duration": "4:41"},
+            {"title": "Bad Habits", "duration": "3:51"}
+        ]
     }
 ]

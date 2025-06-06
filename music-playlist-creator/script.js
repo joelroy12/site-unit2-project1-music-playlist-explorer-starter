@@ -5,76 +5,127 @@ document.addEventListener("DOMContentLoaded", () => {
     const span = document.getElementsByClassName("song-card")[0];
     const closeButton = document.querySelector(".close");
     const playlistCards = document.getElementsByClassName("song-card");
+    const shuffleBtn = document.getElementById('shuffle-btn');
+    let currPlaylistIndex = 0;
+
 
     // remember to add actual song names for the playlists with a minimum of 5
     // to allow shuffle
 
     const playlists = [
-        {
-            "playlistID": 1,
-            "playlist_name": "WOW",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Dua Lipa",
-            "songs": ["Levitating", "Don't Start Now", "New Rules", "Physical", "Break My Heart"]
-        },
-        {
-            "playlistID": 2,
-            "playlist_name": "NAH",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Drake",
-            "songs": ["God's Plan", "Hotline Bling", "One Dance", "In My Feelings", "Nonstop"]
-        },
-        {
-            "playlistID": 3,
-            "playlist_name": "LOOKUP",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Billie Eilish",
-            "songs": ["Bad Guy", "Therefore I Am", "Happier Than Ever", "Ocean Eyes", "bury a friend"]
-        },
-        {
-            "playlistID": 4,
-            "playlist_name": "TURNAROUND",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Harry Styles",
-            "songs": ["As It Was", "Watermelon Sugar", "Adore You", "Sign of the Times", "Golden"]
-        },
-        {
-            "playlistID": 5,
-            "playlist_name": "WATCHOUT",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Taylor Swift",
-            "songs": ["Anti-Hero", "Shake It Off", "Blank Space", "Cruel Summer", "Love Story"]
-        },
-        {
-            "playlistID": 6,
-            "playlist_name": "FUNKYTIME",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "The Weeknd",
-            "songs": ["Blinding Lights", "Save Your Tears", "Starboy", "Can't Feel My Face", "In The Night"]
-        },
-        {
-            "playlistID": 7,
-            "playlist_name": "UHOH",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Ariana Grande",
-            "songs": ["positions", "7 rings", "thank u, next", "Into You", "No Tears Left to Cry"]
-        },
-        {
-            "playlistID": 8,
-            "playlist_name": "WHO",
-            "playlist_author": "jeffrey",
-            "playlist_art": "./assets/img/playlist.png",
-            "artist": "Ed Sheeran",
-            "songs": ["Shape of You", "Perfect", "Shivers", "Thinking Out Loud", "Bad Habits"]
-        }
+    {
+        "playlistID": 1,
+        "playlist_name": "WOW",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Dua Lipa",
+        "songs": [
+            {"title": "Levitating", "duration": "3:23", "artist": "Dua Lipa"},
+            {"title": "Don't Start Now", "duration": "3:03", "artist": "Dua Lipa"},
+            {"title": "New Rules", "duration": "3:29", "artist": "Dua Lipa"},
+            {"title": "Physical", "duration": "3:13", "artist": "Dua Lipa"},
+            {"title": "Break My Heart", "duration": "3:41", "artist": "Dua Lipa"}
+        ]
+    },
+    {
+        "playlistID": 2,
+        "playlist_name": "NAH",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Drake",
+        "songs": [
+            {"title": "God's Plan", "duration": "3:19", "artist": "Drake"},
+            {"title": "Hotline Bling", "duration": "4:27", "artist": "Drake"},
+            {"title": "One Dance", "duration": "2:53", "artist": "Drake"},
+            {"title": "In My Feelings", "duration": "3:37", "artist": "Drake"},
+            {"title": "Nonstop", "duration": "3:58", "artist": "Drake"}
+        ]
+    },
+    {
+        "playlistID": 3,
+        "playlist_name": "LOOKUP",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Billie Eilish",
+        "songs": [
+            {"title": "Bad Guy", "duration": "3:12", "artist": "Billie Eilish"},
+            {"title": "Therefore I Am", "duration": "2:54", "artist": "Billie Eilish"},
+            {"title": "Happier Than Ever", "duration": "4:52", "artist": "Billie Eilish"},
+            {"title": "Ocean Eyes", "duration": "3:20", "artist": "Billie Eilish"},
+            {"title": "bury a friend", "duration": "3:13", "artist": "Billie Eilish"}
+        ]
+    },
+    {
+        "playlistID": 4,
+        "playlist_name": "TURNAROUND",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Harry Styles",
+        "songs": [
+            {"title": "As It Was", "duration": "2:47", "artist": "Harry Styles"},
+            {"title": "Watermelon Sugar", "duration": "2:56", "artist": "Harry Styles"},
+            {"title": "Adore You", "duration": "3:27", "artist": "Harry Styles"},
+            {"title": "Sign of the Times", "duration": "5:42", "artist": "Harry Styles"},
+            {"title": "Golden", "duration": "3:28", "artist": "Harry Styles"}
+        ]
+    },
+    {
+        "playlistID": 5,
+        "playlist_name": "WATCHOUT",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Taylor Swift",
+        "songs": [
+            {"title": "Anti-Hero", "duration": "3:21", "artist": "Taylor Swift"},
+            {"title": "Shake It Off", "duration": "3:39", "artist": "Taylor Swift"},
+            {"title": "Blank Space", "duration": "3:51", "artist": "Taylor Swift"},
+            {"title": "Cruel Summer", "duration": "2:58", "artist": "Taylor Swift"},
+            {"title": "Love Story", "duration": "3:55", "artist": "Taylor Swift"}
+        ]
+    },
+    {
+    "playlistID": 6,
+    "playlist_name": "FUNKYTIME",
+    "playlist_author": "jeffrey",
+    "playlist_art": "./assets/img/playlist.png",
+    "artist": "The Weeknd",
+    "songs": [
+        {"title": "Blinding Lights", "duration": "3:21", "artist": "The Weeknd"},
+        {"title": "Save Your Tears", "duration": "3:35", "artist": "The Weeknd"},
+        {"title": "Starboy", "duration": "3:50", "artist": "The Weeknd"},
+        {"title": "Can't Feel My Face", "duration": "3:33", "artist": "The Weeknd"},
+        {"title": "In The Night", "duration": "3:55", "artist": "The Weeknd"}
     ]
+    },
+    {
+        "playlistID": 7,
+        "playlist_name": "UHOH",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Ariana Grande",
+        "songs": [
+            {"title": "positions", "duration": "2:52", "artist": "Ariana Grande"},
+            {"title": "7 rings", "duration": "2:58", "artist": "Ariana Grande"},
+            {"title": "thank u, next", "duration": "3:27", "artist": "Ariana Grande"},
+            {"title": "Into You", "duration": "4:04", "artist": "Ariana Grande"},
+            {"title": "No Tears Left to Cry", "duration": "3:25", "artist": "Ariana Grande"}
+        ]
+    },
+    {
+        "playlistID": 8,
+        "playlist_name": "WHO",
+        "playlist_author": "jeffrey",
+        "playlist_art": "./assets/img/playlist.png",
+        "artist": "Ed Sheeran",
+        "songs": [
+            {"title": "Shape of You", "duration": "3:53", "artist": "Ed Sheeran"},
+            {"title": "Perfect", "duration": "4:23", "artist": "Ed Sheeran"},
+            {"title": "Shivers", "duration": "3:27", "artist": "Ed Sheeran"},
+            {"title": "Thinking Out Loud", "duration": "4:41", "artist": "Ed Sheeran"},
+            {"title": "Bad Habits", "duration": "3:51", "artist": "Ed Sheeran"}
+        ]
+    }
+]
 
     function openModal(playlist) {
         document.getElementById('playlist-name').innerText = playlist.playlist_name;
@@ -82,26 +133,29 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('playlist-art').src = playlist.playlist_art;
         modal.style.display = "block";
         console.log(playlist);
-        for (let i = 0; i < playlist.songs.length; i++) {
-            var songs = document.createElement('div');
-            songs.className = "song-containers";
-            var albumName = document.createElement('h4');
-            var songName = document.createElement('h3');
-            var authorName = document.createElement('h4');
-            var image = document.createElement('img');
-            var totalContainer = document.createElement('div');
-            albumName.textContent = "Album Name: " + playlist.playlist_name;
-            songName.textContent = "Song Name: " + playlist.songs[i];
-            authorName.textContent = "Artist: " + playlist.artist;
-            image.src = playlist.playlist_art;
-            totalContainer.appendChild(songName);
-            totalContainer.appendChild(albumName);
-            totalContainer.appendChild(authorName);
-            songs.appendChild(image);
-            songs.appendChild(totalContainer);
-            console.log(albumName.textContent);
-            document.getElementById('songs-list').appendChild(songs);
-        }
+        updateSongsList(playlist.songs)
+
+// I KEPT THIS SO I COULD LEARN FROM IT
+        // for (let i = 0; i < playlist.songs.length; i++) {
+        //     let songs = document.createElement('div');
+        //     songs.className = "song-containers";
+        //     // let albumName = document.createElement('h4');
+        //     let songName = document.createElement('h3');
+        //     // let authorName = document.createElement('h4');
+        //     // let image = document.createElement('img');
+        //     // let totalContainer = document.createElement('div');
+        //     // albumName.textContent = "Album Name: " + playlist.playlist_name;
+        //     songName.textContent = "Song Name: " + playlist.songs[i];
+        //     // authorName.textContent = "Artist: " + playlist.artist;
+        //     // image.src = playlist.playlist_art;
+        //     songs.appendChild(songName);
+        //     // totalContainer.appendChild(albumName);
+        //     // totalContainer.appendChild(authorName);
+        //     // songs.appendChild(image);
+        //     // songs.appendChild(totalContainer);
+        //     // console.log(albumName.textContent);
+        //     document.getElementById('songs-list').appendChild(songs);
+        // }
     }
     for (let i = 0; i < playlistCards.length; i++) {
         const card = playlistCards[i];
@@ -158,11 +212,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Shuffle button function
-    function shuffleArray(playlist) {
-        for (let i = Array.length -1; i > 0; i--) {
+    shuffleBtn.addEventListener('click', () => {
+        console.log(document.getElementById('songs-list'));
+        const newShuffledArray = shuffleArray(playlists[currPlaylistIndex].songs);
+        console.log(playlists[currPlaylistIndex]);
+        updateSongsList(newShuffledArray);
+    });
+
+    function shuffleArray(array) {
+        console.log(array);
+        for (let i = array.length -1; i > 0; i--) {
             const j = Math.floor(Math.random()*(i+1));
-            [playlist[i],playlist[j]] = [playlist[j],playlist[i]];
+            [array[i],array[j]] = [array[j],array[i]];
         }
+        console.log(array);
+        return array;
+    }
+
+    function updateSongsList(array, playlist) {
+        const songsList = document.getElementById('songs-list');
+        songsList.innerHTML = '';
+
+        for (let i = 0; i < array.length; i++) {
+            let songContainer = document.createElement('div');
+            // let totalContainer = document.createElement('img');
+            // let image = document.createElement('img');
+            let songName = document.createElement('h3');
+            // let albumName = document.createElement('h4');
+            // let authorName = document.createElement('h4');
+            songContainer.className = "song-containers";
+            // image.src = playlist.playlist_art;
+            songName.textContent = "Song Name: " + array[i].title + "      |      Artist Name: " + array[i].artist + "      |       Duration: " + array[i].duration;
+            // authorName.textContent = "Artist: " + playlist.artist;
+            // albumName.textContent = "Album Name: " + playlist.playlist_name;
+            // totalContainer.appendChild(albumName);
+            songContainer.appendChild(songName);
+            // totalContainer.appendChild(authorName);
+            // songContainer.appendChild(image);
+            // songContainer.appendChild(totalContainer);
+            document.getElementById('songs-list').appendChild(songContainer);
+        }
+        console.log(document.getElementById('songs-list'));
+
     }
 
 });
