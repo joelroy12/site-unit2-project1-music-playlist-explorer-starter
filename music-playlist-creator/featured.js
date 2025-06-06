@@ -128,20 +128,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     let songContainer = document.createElement('div');
                     songContainer.className = "song-containers";
                     let albumName = document.createElement('h4');
-                    let songName = document.createElement('h3');
+                    let songName = document.createElement('h4');
                     let authorName = document.createElement('h4');
+                    let duration = document.createElement('h4');
                     let image = document.createElement('img');
                     let totalContainer = document.createElement('div');
 
                     albumName.textContent = "Album Name: " + randomPlaylist.playlist_name;
                     songName.textContent = "Song Name: " + randomPlaylist.songs[i].title;
                     authorName.textContent = "Artist: " + randomPlaylist.artist;
+                    duration.textContent = "Duration: " + randomPlaylist.songs[i].duration;
                     image.src = randomPlaylist.playlist_art;
 
-                    songContainer.appendChild(songName);
+                    totalContainer.appendChild(image);
                     totalContainer.appendChild(albumName);
                     totalContainer.appendChild(authorName);
-                    totalContainer.appendChild(image);
+                    totalContainer.appendChild(duration);
+                    songContainer.appendChild(songName);
                     songContainer.appendChild(totalContainer);
                     console.log(albumName.textContent);
                     document.getElementById('songs-list-featured').appendChild(songContainer);

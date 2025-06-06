@@ -139,21 +139,21 @@ document.addEventListener("DOMContentLoaded", () => {
         // for (let i = 0; i < playlist.songs.length; i++) {
         //     let songs = document.createElement('div');
         //     songs.className = "song-containers";
-        //     // let albumName = document.createElement('h4');
+        //     let albumName = document.createElement('h4');
         //     let songName = document.createElement('h3');
-        //     // let authorName = document.createElement('h4');
-        //     // let image = document.createElement('img');
-        //     // let totalContainer = document.createElement('div');
-        //     // albumName.textContent = "Album Name: " + playlist.playlist_name;
+        //     let authorName = document.createElement('h4');
+        //     let image = document.createElement('img');
+        //     let totalContainer = document.createElement('div');
+        //     albumName.textContent = "Album Name: " + playlist.playlist_name;
         //     songName.textContent = "Song Name: " + playlist.songs[i];
-        //     // authorName.textContent = "Artist: " + playlist.artist;
-        //     // image.src = playlist.playlist_art;
+        //     authorName.textContent = "Artist: " + playlist.artist;
+        //     image.src = playlist.playlist_art;
         //     songs.appendChild(songName);
-        //     // totalContainer.appendChild(albumName);
-        //     // totalContainer.appendChild(authorName);
-        //     // songs.appendChild(image);
-        //     // songs.appendChild(totalContainer);
-        //     // console.log(albumName.textContent);
+        //     totalContainer.appendChild(albumName);
+        //     totalContainer.appendChild(authorName);
+        //     songs.appendChild(image);
+        //     songs.appendChild(totalContainer);
+        //     console.log(albumName.textContent);
         //     document.getElementById('songs-list').appendChild(songs);
         // }
     }
