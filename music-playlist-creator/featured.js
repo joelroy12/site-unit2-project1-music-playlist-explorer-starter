@@ -114,35 +114,39 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         }
     ]
-        function displayRandom(playlist) {
-            document.getElementById('playlist-name').innerText = playlist.playlist_name;
-            document.getElementById('playlist-author').innerText = playlist.playlist_author;
-            document.getElementById('playlist-art').src = playlist.playlist_art;
-            modal.style.display = "block";
-            console.log(playlist);
+    
+        function displayRandom() {
+            // const element = document.getElementById('songs-list');
+            // console.log(element);
+            document.getElementById('songs-list-featured').innerHTML = '';
+            const randomPlaylist = playlists[Math.floor(Math.random() * playlists.length)];
+            document.getElementById('playlist-name').innerText = randomPlaylist.playlist_name;
+            document.getElementById('playlist-author').innerText = randomPlaylist.playlist_author;
+            document.getElementById('playlist-art').src = randomPlaylist.playlist_art;
 
-                for (let i = 0; i < playlist.songs.length; i++) {
-                    let songs = document.createElement('div');
-                    songs.className = "song-containers";
+                for (let i = 0; i < randomPlaylist.songs.length; i++) {
+                    let songContainer = document.createElement('div');
+                    songContainer.className = "song-containers";
                     let albumName = document.createElement('h4');
                     let songName = document.createElement('h3');
                     let authorName = document.createElement('h4');
                     let image = document.createElement('img');
                     let totalContainer = document.createElement('div');
-                    albumName.textContent = "Album Name: " + playlist.playlist_name;
-                    songName.textContent = "Song Name: " + playlist.songs[i];
-                    authorName.textContent = "Artist: " + playlist.artist;
-                    image.src = playlist.playlist_art;
-                    songs.appendChild(songName);
+
+                    albumName.textContent = "Album Name: " + randomPlaylist.playlist_name;
+                    songName.textContent = "Song Name: " + randomPlaylist.songs[i].title;
+                    authorName.textContent = "Artist: " + randomPlaylist.artist;
+                    image.src = randomPlaylist.playlist_art;
+
+                    songContainer.appendChild(songName);
                     totalContainer.appendChild(albumName);
                     totalContainer.appendChild(authorName);
-                    songs.appendChild(image);
-                    songs.appendChild(totalContainer);
+                    totalContainer.appendChild(image);
+                    songContainer.appendChild(totalContainer);
                     console.log(albumName.textContent);
-                    document.getElementById('songs-list').appendChild(songs);
+                    document.getElementById('songs-list-featured').appendChild(songContainer);
 
                 }
             }
-            displayRandom(playlists[i]);
-            
+            displayRandom();
 });
