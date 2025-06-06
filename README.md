@@ -138,15 +138,15 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site] htt
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Yes. The labs were useful however there were also instances where we skipped over important portionsn of the lab that could have helped us learn functions we needed to know for the project. I think I was very unprepared for the modal and the shuffle. I don't believe we talked about those concepts and it would have helped however, after researching it for a couple of hours it made sense.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+I would probably reapproach the way I created the modal. I did a lot of appending and it slowed down my process for a while. I also would like to do the additional stretch features as I didn't do all of it.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I didn't do a project demo however from my perspective when I tested it on my own, it went well. I tried challening my own website as if I was demoing and it performed well. It got all of the MVP and some stretch features!
 
 ### Open-source libraries used
 
@@ -154,4 +154,4 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+The Tech Fellows all helped me out a lot! This includes Virsaviya, Matthew, Ebony, Paulo, and Erika!
