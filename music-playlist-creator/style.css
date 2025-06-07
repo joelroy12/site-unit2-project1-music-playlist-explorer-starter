@@ -214,8 +214,11 @@ footer {
     cursor: pointer;
 }
 
-.like-count {
-    margin: 0;
+p.like-count {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 60px;
+    margin-top: -10px;
 }
 
 .all-redirect {
@@ -223,7 +226,7 @@ footer {
     justify-content: flex-end;
     font-weight: bold;
     color: black;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .featured-redirect {
@@ -231,7 +234,12 @@ footer {
     justify-content: flex-end;
     font-weight: bold;
     color: black;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
-
+.delete-button {
+    display: flex;
+    align-items: flex-end;
+    margin: -15px;
+    padding: 1px;
+}

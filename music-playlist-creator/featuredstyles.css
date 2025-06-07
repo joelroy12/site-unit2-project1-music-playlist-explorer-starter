@@ -24,10 +24,6 @@ footer {
     height: 3%;
 }
 
-.featured-footer {
-
-}
-
 main.featured-main {
     display: flex;
     align-content: center;
@@ -69,10 +65,6 @@ main.featured-main {
 
 .playlist-display h2 {
     margin: 0;
-}
-
-.featured-songs-image > * {
-    /* border: 2px solid red; */
 }
 
 .featured-songs-image #songs-list-featured {
@@ -128,4 +120,14 @@ img {
 
 .featured-songs-display #songs-list-featured {
     width: 30%;
+}
+
+.all-redirect {
+    font-weight: bold;
+    color: black;
+}
+
+.featured-redirect {
+    font-weight: bold;
+    color: black;
 }

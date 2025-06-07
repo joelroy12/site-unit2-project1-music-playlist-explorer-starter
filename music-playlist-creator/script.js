@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeButton = document.querySelector(".close");
     const playlistCards = document.getElementsByClassName("song-card");
     const shuffleBtn = document.getElementById('shuffle-btn');
+    deletePlaylist();
+    
     let currPlaylistIndex = 0;
 
 
@@ -256,6 +258,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    
+// Delete playlist function
+
+    function deletePlaylist() {
+        const deleteBtn = document.querySelectorAll('.delete-button');
+        for (let i = 0; i < deleteBtn.length; i++) {
+        deleteBtn[i].addEventListener('click', () => {
+            event.stopPropagation();
+                deleteBtn[i].parentNode.style.display = ("none");
+            });
+        }
+    }
+
+// Create playlist function
+
+    createPlaylistBtn = document.getElementById('create-playlist-btn');
+    createPlaylistForm = document.getElementById('create-playlist-form');
+    createPlaylistBtn.addEventListener('click', () => {
+        createPlaylistForm.classList.add('show');
+    })
+
+    document.getElementById('submit-playlist-btn').addEventListener("submit", (event) => {
+        event.preventDefault();
+        const playlistName = document.getElementById('playlist-name').value;
+        const coverImage = document.getElementById('cover-image').value;
+        const author = document.getElementById('author').value;
+        createPlaylistForm.classList.remove('show');
+    });
 
 });
