@@ -286,23 +286,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create playlist function
 
-  createPlaylistBtn = document.getElementById("create-playlist-btn");
-  createPlaylistForm = document.getElementById("create-playlist-form");
-  createPlaylistBtn.addEventListener("click", () => {
-    createPlaylistForm.classList.add("show");
-  });
+//   createPlaylistBtn = document.getElementById("create-playlist-btn");
+//   createPlaylistForm = document.getElementById("create-playlist-form");
+//   createPlaylistBtn.addEventListener("click", () => {
+//     createPlaylistForm.classList.add("show");
+//   });
 
-  document
-    .getElementById("submit-form")
-    .addEventListener("submit", (event) => {
-      event.preventDefault();
-      const playlistName = document.getElementById("playlist-name").value;
-      const coverImage = document.getElementById("cover-image").value;
-      const author = document.getElementById("author").value;
-      console.log(playlistName);
-      console.log(author);
+//   document
+//     .getElementById("submit-form")
+//     .addEventListener("submit", (event) => {
+//       event.preventDefault();
+//       const playlistName = document.getElementById("playlist-name").value;
+//       const coverImage = document.getElementById("cover-image").value;
+//       const author = document.getElementById("author").value;
+//       console.log(playlistName);
+//       console.log(author);
 
-      
-      createPlaylistForm.classList.remove("show");
-    });
+
+//       createPlaylistForm.classList.remove("show");
+//     });
 });
